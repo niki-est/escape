@@ -6,6 +6,8 @@ import scene3Background from './scene3-background.jpg';
 
 const App = () => {
   const [currentScene, setCurrentScene] = useState(0);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [modalText, setModalText] = useState('');
   const scenes = [
     {
       character: "Добро пожаловать",
@@ -36,10 +38,11 @@ const App = () => {
     }
   ];
 
-  const chooseOption = (choice) => {
+ const chooseOption = (choice) => {
     const scene = scenes[currentScene];
     const option = scene.options.find(opt => opt.choice === choice);
-    alert(option.outcome);
+    setModalText(option.outcome);
+    setModalVisible(true);
     if (option.next !== null) {
       setCurrentScene(option.next);
     }
@@ -71,6 +74,14 @@ const App = () => {
           </button>
         ))}
       </div>
+      {modalVisible && (
+        <div className="modal">
+          <div className="modal-content">
+            <p>{modalText}</p>
+            <button onClick={() => setModalVisible(false)}>OK</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
