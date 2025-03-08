@@ -11,7 +11,7 @@ const App = () => {
         { label: "Войти", choice: "enter", next: null, outcome: "Добро пожаловать в мир Клуба Армии!" },
         { label: "Убежать и забыть", choice: "run", next: 1, outcome: "Тебя догнали и ты проиграл..." }
       ],
-      background: 'scene1-background.jpg'
+      background: '/scene1-background.jpg'
     },
     {
       character: "Злая женщина",
@@ -20,7 +20,7 @@ const App = () => {
         { label: "В туалет", choice: "toilet", next: null, outcome: "Тебя выгоняют. Проигрыш!" },
         { label: "На медкомиссию", choice: "med", next: 2, outcome: "Женщина отвечает: «Садитесь в очередь в 5 кабинет»." }
       ],
-      background: 'scene2-background.jpg'
+      background: '/scene2-background.jpg'
     },
     {
       character: "Ты",
@@ -29,7 +29,7 @@ const App = () => {
         { label: "Пойти в очередь", choice: "queue", next: 3, outcome: "Ты идёшь в очередь." },
         { label: "Уйти", choice: "leave", next: null, outcome: "Ты ушёл. Проигрыш!" }
       ],
-      background: 'scene3-background.jpg'
+      background: '/scene3-background.jpg'
     }
   ];
 
