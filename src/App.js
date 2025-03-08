@@ -3,7 +3,7 @@ import './App.css';
 import scene1Background from './scene1-background.jpg';
 import scene2Background from './scene2-background.jpg';
 import scene3Background from './scene3-background.jpg';
-import backgroundMusic from './HHH.mp3';
+// import backgroundMusic from './HHH.mp3';
 
 const App = () => {
   const [currentScene, setCurrentScene] = useState(0);
@@ -39,12 +39,12 @@ const App = () => {
     }
   ];
 
- const audio = new Audio(backgroundMusic);
-useEffect(() => {
-  audio.loop = true; // Цикличное воспроизведение
-  audio.play().catch(() => {}); // Игнорируем ошибки автоплея
-  return () => audio.pause(); // Остановка при размонтировании
-}, []);
+//const audio = new Audio(backgroundMusic);
+// useEffect(() => {
+//  audio.loop = true; // Цикличное воспроизведение
+//  audio.play().catch(() => {}); // Игнорируем ошибки автоплея
+//  return () => audio.pause(); // Остановка при размонтировании
+//}, []);
 
  const chooseOption = (choice) => {
     const scene = scenes[currentScene];
