@@ -11,7 +11,7 @@ const App = () => {
         { label: "Войти", choice: "enter", next: null, outcome: "Тебя сразу забирают в армию. Проигрыш!" },
         { label: "Убежать и забыть", choice: "run", next: 1, outcome: "Ты решаешь сбежать и пока в безопасности." }
       ],
-      background: '/scene1-background.jpg'
+      background: 'src/scene1-background.jpg'
     },
     {
       character: "Злая женщина",
