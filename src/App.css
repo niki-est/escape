@@ -1,70 +1,75 @@
 .App {
-  text-align: center;
-  background: url('background.png') no-repeat center center;
   background-size: cover;
+  background-position: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
+  justify-content: flex-end;
+  padding: 20px;
+  position: relative;
 }
 
-canvas {
-  border: 12px solid #333;
-  image-rendering: pixelated;
-  background: url('welcome.png') no-repeat center center;
-  background-size: cover;
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  aspect-ratio: 4 / 3;
+.character-box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
-.scene-description p {
-  font-size: 20px;
+.character-name {
+  background: #87CEEB;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 18px;
   font-family: Arial, sans-serif;
-  color: #333;
+}
+
+.dialog-box {
+  background: rgba(75, 0, 130, 0.9);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.dialog-box p {
   margin: 5px 0;
+  font-size: 18px;
+}
+
+.dialog-box::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid rgba(75, 0, 130, 0.9);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 button {
-  padding: 10px 20px;
-  margin: 5px;
+  background: #6A5ACD;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  width: 120px;
+  font-family: Arial, sans-serif;
 }
 
 button:hover {
-  background-color: #45a049;
+  background: #5A4BBD;
 }
 
 @media (max-width: 600px) {
-  canvas { max-width: 90%; }
-  button { font-size: 14px; width: 100px; padding: 8px 16px; }
-  .scene-description p { font-size: 16px; }
-}
-
-.scene-box {
-  background: url('house_background.png') no-repeat center center;
-  background-size: cover;
-  padding: 15px;
-  border: 2px solid #333;
-  border-radius: 10px;
-  margin: 10px 0;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.scene-box p {
-  font-size: 20px;
-  font-family: Arial, sans-serif;
-  color: #333;
-  margin: 5px 0;
+  .dialog-box p { font-size: 16px; }
+  button { font-size: 14px; padding: 8px; }
 }
