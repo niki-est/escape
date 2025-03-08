@@ -1,21 +1,23 @@
 .App {
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  height: 100vh; /* Полная высота экрана */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 20px;
+  padding: 10px;
   position: relative;
   width: 100%;
-  max-width: 500px; /* Ограничиваем ширину для мобильных */
-  margin: 0 auto; /* Центрируем */
+  max-width: 500px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden; /* Убираем прокрутку */
 }
 
 .character-box {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
 }
 
 .character-name {
@@ -36,6 +38,7 @@
   font-family: Arial, sans-serif;
   position: relative;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .dialog-box::before {
@@ -57,6 +60,7 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 button {
@@ -78,6 +82,6 @@ button:hover {
 @media (max-width: 600px) {
   .dialog-box p { font-size: 16px; }
   button { font-size: 14px; padding: 8px; }
-  .App { padding: 10px; }
+  .App { padding: 5px; }
   .character-name { font-size: 16px; }
 }

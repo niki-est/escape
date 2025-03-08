@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import scene1Background from './scene1-background.jpg';
+import scene2Background from './scene2-background.jpg';
+import scene3Background from './scene3-background.jpg';
 
 const App = () => {
   const [currentScene, setCurrentScene] = useState(0);
@@ -11,7 +14,7 @@ const App = () => {
         { label: "Войти", choice: "enter", next: null, outcome: "Тебя сразу забирают в армию. Проигрыш!" },
         { label: "Убежать и забыть", choice: "run", next: 1, outcome: "Ты решаешь сбежать и пока в безопасности." }
       ],
-      background: 'src/scene1-background.jpg'
+      background: scene1-background.jpg
     },
     {
       character: "Злая женщина",
@@ -20,7 +23,7 @@ const App = () => {
         { label: "В туалет", choice: "toilet", next: null, outcome: "Тебя выгоняют. Проигрыш!" },
         { label: "На медкомиссию", choice: "med", next: 2, outcome: "Женщина отвечает: «Садитесь в очередь в 5 кабинет»." }
       ],
-      background: '/scene2-background.jpg'
+      background: scene2-background.jpg
     },
     {
       character: "Ты",
@@ -29,7 +32,7 @@ const App = () => {
         { label: "Пойти в очередь", choice: "queue", next: 3, outcome: "Ты идёшь в очередь." },
         { label: "Уйти", choice: "leave", next: null, outcome: "Ты ушёл. Проигрыш!" }
       ],
-      background: '/scene3-background.jpg'
+      background: scene3-background.jpg
     }
   ];
 
