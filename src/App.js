@@ -25,7 +25,6 @@ const App = () => {
         { label: "Уйти", choice: "leave", next: null, outcome: "Ты ушёл. Проигрыш!" }
       ]
     }
-    // Добавь остальные сцены позже
   ];
 
   const chooseOption = (choice) => {
@@ -51,7 +50,7 @@ const App = () => {
   return (
     <div className="App">
       <canvas id="gameCanvas" width="400" height="300" />
-      <div className="scene-description">
+      <div className="scene-box">
         {scenes[currentScene].text.map((line, i) => <p key={i}>{line}</p>)}
       </div>
       <div>
