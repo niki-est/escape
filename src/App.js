@@ -5,17 +5,17 @@ const App = () => {
   const [currentScene, setCurrentScene] = useState(0);
   const scenes = [
     {
-      character: "Военкомат",
-      text: ["Я тут просто первый день.", "Чего тебе? («Случайно» задевает ведро.)"],
+      character: "Злая женщина",
+      text: ["Я тут просто первый день.", "Чего пялишься? («Случайно» задевает ведро.)"],
       options: [
-        { label: "Войти", choice: "enter", next: null, outcome: "Добро пожаловать в мир Клуба Армии!" },
-        { label: "Убежать и забыть", choice: "run", next: 1, outcome: "Тебя догнали и ты проиграл..." }
+        { label: "Войти", choice: "enter", next: null, outcome: "Тебя сразу забирают в армию. Проигрыш!" },
+        { label: "Убежать и забыть", choice: "run", next: 1, outcome: "Ты решаешь сбежать и пока в безопасности." }
       ],
       background: '/scene1-background.jpg'
     },
     {
       character: "Злая женщина",
-      text: ["КПП военкомата", "«Вам куда?» — Твой ответ?"],
+      text: ["КПП военкомата", "Злая женщина спрашивает: «Вам куда?» — Твой ответ?"],
       options: [
         { label: "В туалет", choice: "toilet", next: null, outcome: "Тебя выгоняют. Проигрыш!" },
         { label: "На медкомиссию", choice: "med", next: 2, outcome: "Женщина отвечает: «Садитесь в очередь в 5 кабинет»." }

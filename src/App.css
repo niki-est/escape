@@ -8,7 +8,7 @@
   padding: 20px;
   position: relative;
   width: 100%;
-  max-width: 500px; /* Ограничиваем ширину для мобильных */
+  max-width: 700px; /* Ограничиваем ширину для мобильных */
   margin: 0 auto; /* Центрируем */
 }
 
